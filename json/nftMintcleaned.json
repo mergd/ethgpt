@@ -1,0 +1,125 @@
+{
+  "ok": true,
+  "result": {
+    "chain": "ethereum",
+    "txhash": "0xff1b2b0b89b2a3f2b4e41a6c3729c703ef5e23977d2054ff12fc15e5b4518056",
+    "addresses": {
+      "0x1f8a8d723c2b4038866286aec8c52b44214ffc8f": {
+        "0xbb0fc1741526da20903e3ccbab205418efe1c9499f75a6f1d3fe57ea8ea458d0": {
+          "label": "",
+          "functions": {
+            "0xd85d3d27": {
+              "type": "function",
+              "name": "mint",
+              "inputs": [
+                {
+                  "name": "arg0",
+                  "type": "string",
+                  "components": null
+                }
+              ],
+              "outputs": null,
+              "constant": false
+            }
+          },
+          "events": {
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+              "type": "event",
+              "name": "Transfer",
+              "inputs": [
+                {
+                  "name": "arg0",
+                  "type": "address",
+                  "components": null,
+                  "indexed": false
+                },
+                {
+                  "name": "arg1",
+                  "type": "address",
+                  "components": null,
+                  "indexed": false
+                },
+                {
+                  "name": "arg2",
+                  "type": "uint256",
+                  "components": null,
+                  "indexed": false
+                }
+              ],
+              "anonymous": false
+            }
+          },
+          "errors": {}
+        }
+      },
+      "0x8d0802559775c70fb505f22988a4fd4a4f6d3b62": {
+        "0x4d9be648c5bf39973670d9f8b481d5d0b971e6a2db2deccc6b98cde21c5dd83e": {
+          "label": "",
+          "functions": {
+            "0xd85d3d27": {
+              "type": "function",
+              "name": "mint",
+              "inputs": [
+                {
+                  "name": "arg0",
+                  "type": "string",
+                  "components": null
+                }
+              ],
+              "outputs": null,
+              "constant": false
+            }
+          },
+          "events": {},
+          "errors": {}
+        }
+      }
+    },
+    "entrypoint": {
+      "path": "0",
+      "type": "call",
+      "variant": "call",
+      "from": "0x2b133847465ce196015044afbe675afdda482e1b",
+      "to": "0x8d0802559775c70fb505f22988a4fd4a4f6d3b62",
+      "isPrecompile": false,
+      "children": [
+        {
+          "path": "0.2",
+          "type": "call",
+          "variant": "delegatecall",
+          "from": "0x8d0802559775c70fb505f22988a4fd4a4f6d3b62",
+          "to": "0x1f8a8d723c2b4038866286aec8c52b44214ffc8f",
+          "input": "0xd85d3d270000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000377656e0000000000000000000000000000000000000000000000000000000000",
+          "output": "0x",
+          "gas": 100226,
+          "gasUsed": 57421,
+          "value": "0x0",
+          "status": 1,
+          "codehash": "0xbb0fc1741526da20903e3ccbab205418efe1c9499f75a6f1d3fe57ea8ea458d0",
+          "isPrecompile": false,
+          "children": [
+            {
+              "path": "0.2.6",
+              "type": "log",
+              "topics": [
+                "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+                "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "0x0000000000000000000000002b133847465ce196015044afbe675afdda482e1b",
+                "0x000000000000000000000000000000000000000000000000000000000001775f"
+              ],
+              "data": "0x"
+            },
+            {
+              "path": "0.2.8",
+              "type": "log",
+              "topics": [
+                "0xfa0b593ec95f2b51f6caa268db36a56441fddca87b6d8009c470d94433782f8d"
+              ],
+              "data": "0x000000000000000000000000000000000000000000000000000000000001775f0000000000000000000000002b133847465ce196015044afbe675afdda482e1b0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000377656e0000000000000000000000000000000000000000000000000000000000"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

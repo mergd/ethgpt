@@ -1,0 +1,185 @@
+{
+  "ok": true,
+  "result": {
+    "chain": "ethereum",
+    "txhash": "0x4a2bcb47c9b21bbd1cfd64c7249d17163b2d623e59838228b174027c9eac11de",
+    "preimages": {
+      "0x0aa97e183fd29f5762d54aa4d04347c129d63bde17dffd22b4c168b007aae979": "0x00000000000000000000000021be0516518509654e9001c749a68fe7e70917fa0000000000000000000000000000000000000000000000000000000000000003",
+      "0x429d4eed491ec793d176b1cd2c9e12912f9df2c877000f2084223eef2d801813": "0x000000000000000000000000f89d7b9c864f589bbf53a82105107622b35eaa400000000000000000000000000000000000000000000000000000000000000003",
+      "0x75b2e45fd51e1614600f5d9bd8f2433ecaab86bb441a3d0c5565b68e1bba75dd": "0x00000000000000000000000021be0516518509654e9001c749a68fe7e70917fa0000000000000000000000000000000000000000000000000000000000000009",
+      "0xb374d549c4210ce4d86594fd6e5e972db66a2b8995be56e77460d52fbd255e5e": "0x000000000000000000000000f89d7b9c864f589bbf53a82105107622b35eaa400000000000000000000000000000000000000000000000000000000000000009"
+    },
+    "addresses": {
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "0xd80d4b7c890cb9d6a4893e6b52bc34b56b25335cb13716e0d1d31383e6b41505": {
+          "label": "Centre: USD Coin",
+          "functions": {
+            "0xa9059cbb": {
+              "type": "function",
+              "name": "transfer",
+              "inputs": [
+                { "name": "to", "type": "address", "components": null },
+                { "name": "value", "type": "uint256", "components": null }
+              ],
+              "outputs": [{ "name": "", "type": "bool", "components": null }],
+              "constant": false
+            }
+          },
+          "events": {},
+          "errors": {}
+        }
+      },
+      "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf": {
+        "0x10d68f9bb2ba9f5e9163cadc4a3446be0c6b2ab8b1b65079e79dcd94a6dc329c": {
+          "label": "FiatTokenV2_1",
+          "functions": {
+            "0xa9059cbb": {
+              "type": "function",
+              "name": "transfer",
+              "inputs": [
+                { "name": "to", "type": "address", "components": null },
+                { "name": "value", "type": "uint256", "components": null }
+              ],
+              "outputs": [{ "name": "", "type": "bool", "components": null }],
+              "constant": false
+            }
+          },
+          "events": {
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+              "type": "event",
+              "name": "Transfer",
+              "inputs": [
+                {
+                  "name": "from",
+                  "type": "address",
+                  "components": null,
+                  "indexed": true
+                },
+                {
+                  "name": "to",
+                  "type": "address",
+                  "components": null,
+                  "indexed": true
+                },
+                {
+                  "name": "value",
+                  "type": "uint256",
+                  "components": null,
+                  "indexed": false
+                }
+              ],
+              "anonymous": false
+            }
+          },
+          "errors": {}
+        }
+      }
+    },
+    "entrypoint": {
+      "path": "0",
+      "type": "call",
+      "variant": "call",
+      "from": "0xf89d7b9c864f589bbf53a82105107622b35eaa40",
+      "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "input": "0xa9059cbb00000000000000000000000021be0516518509654e9001c749a68fe7e70917fa000000000000000000000000000000000000000000000000000000000609b720",
+      "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "gas": 90000,
+      "gasUsed": 65625,
+      "value": "0x0",
+      "status": 1,
+      "codehash": "0xd80d4b7c890cb9d6a4893e6b52bc34b56b25335cb13716e0d1d31383e6b41505",
+      "isPrecompile": false,
+      "children": [
+        {
+          "path": "0.0",
+          "type": "sload",
+          "slot": "0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b",
+          "value": "0x000000000000000000000000807a96288a1a408dbc13de2b1d087d10356395d2"
+        },
+        {
+          "path": "0.1",
+          "type": "sload",
+          "slot": "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+          "value": "0x000000000000000000000000a2327a938febf5fec13bacfb16ae10ecbc4cbdcf"
+        },
+        {
+          "path": "0.2",
+          "type": "call",
+          "variant": "delegatecall",
+          "from": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "to": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+          "input": "0xa9059cbb00000000000000000000000021be0516518509654e9001c749a68fe7e70917fa000000000000000000000000000000000000000000000000000000000609b720",
+          "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "gas": 60192,
+          "gasUsed": 36728,
+          "value": "0x0",
+          "status": 1,
+          "codehash": "0x10d68f9bb2ba9f5e9163cadc4a3446be0c6b2ab8b1b65079e79dcd94a6dc329c",
+          "isPrecompile": false,
+          "children": [
+            {
+              "path": "0.2.0",
+              "type": "sload",
+              "slot": "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "value": "0x0000000000000000000000004914f61d25e5c567143774b76edbf4d5109a8566"
+            },
+            {
+              "path": "0.2.1",
+              "type": "sload",
+              "slot": "0x429d4eed491ec793d176b1cd2c9e12912f9df2c877000f2084223eef2d801813",
+              "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "path": "0.2.2",
+              "type": "sload",
+              "slot": "0x0aa97e183fd29f5762d54aa4d04347c129d63bde17dffd22b4c168b007aae979",
+              "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "path": "0.2.3",
+              "type": "sload",
+              "slot": "0xb374d549c4210ce4d86594fd6e5e972db66a2b8995be56e77460d52fbd255e5e",
+              "value": "0x00000000000000000000000000000000000000000000000000001218055c5fde"
+            },
+            {
+              "path": "0.2.4",
+              "type": "sload",
+              "slot": "0xb374d549c4210ce4d86594fd6e5e972db66a2b8995be56e77460d52fbd255e5e",
+              "value": "0x00000000000000000000000000000000000000000000000000001218055c5fde"
+            },
+            {
+              "path": "0.2.5",
+              "type": "sstore",
+              "slot": "0xb374d549c4210ce4d86594fd6e5e972db66a2b8995be56e77460d52fbd255e5e",
+              "oldValue": "0x00000000000000000000000000000000000000000000000000001218055c5fde",
+              "newValue": "0x00000000000000000000000000000000000000000000000000001217ff52a8be"
+            },
+            {
+              "path": "0.2.6",
+              "type": "sload",
+              "slot": "0x75b2e45fd51e1614600f5d9bd8f2433ecaab86bb441a3d0c5565b68e1bba75dd",
+              "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "path": "0.2.7",
+              "type": "sstore",
+              "slot": "0x75b2e45fd51e1614600f5d9bd8f2433ecaab86bb441a3d0c5565b68e1bba75dd",
+              "oldValue": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "newValue": "0x000000000000000000000000000000000000000000000000000000000609b720"
+            },
+            {
+              "path": "0.2.8",
+              "type": "log",
+              "topics": [
+                "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+                "0x000000000000000000000000f89d7b9c864f589bbf53a82105107622b35eaa40",
+                "0x00000000000000000000000021be0516518509654e9001c749a68fe7e70917fa"
+              ],
+              "data": "0x000000000000000000000000000000000000000000000000000000000609b720"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

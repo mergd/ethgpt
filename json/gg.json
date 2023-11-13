@@ -1,0 +1,17 @@
+{
+  "0x9008d19f58aabd9ed0d60971565aa8510560ab41": [
+    {
+      "text": "Coinbase",
+      "bg": "bg-warning",
+      "textColor": "text-dark",
+      "tooltip": "Funded by CEX"
+    },
+    {
+      "text": "NFT Enjoyoor",
+      "bg": "bg-danger",
+      "textColor": "text-white",
+      "icon": "@@smort",
+      "tooltip": "Top 1m addresses which have sent or received NFTs"
+    }
+  ]
+}
