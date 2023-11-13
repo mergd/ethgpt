@@ -1,17 +1,732 @@
 {
-  "0x9008d19f58aabd9ed0d60971565aa8510560ab41": [
-    {
-      "text": "Coinbase",
-      "bg": "bg-warning",
-      "textColor": "text-dark",
-      "tooltip": "Funded by CEX"
+  "ok": true,
+  "result": {
+    "chain": "ethereum",
+    "txhash": "0xf95bfa897c9658ea184409941aaefbbe3b2a3a847dc612e827c83c6ffda92741",
+    "preimages": {
+      "0x08f9a06d46552b7b70c8c34206410f702237fb742fefc1c068f51a930be19dfa": "0x0000000000000000000000002b133847465ce196015044afbe675afdda482e1b0000000000000000000000000000000000000000000000000000000000000009",
+      "0x21ebe1c20d059c8774c0e58bbce5b1cf983d25acc658bc3997f122df6f662c55": "0x9a80e24e463f00a8763c4dcec6a92d07d33272fa5db895d8589be70dccb002df00000000000000000000000000000000000000000000000000000000000000d9",
+      "0x25379e5f1d4780be71567960ce4e5867a2ca9c065cbf97aac462d5b76f927729": "0x0000000000000000000000002b133847465ce196015044afbe675afdda482e1b0000000000000000000000000000000000000000000000000000000000000003",
+      "0x429ffd05499d1caecb97ddac2d1a2d80ed4822382dccff4ed9e2aee00fe2a842": "0x7413ebb05cad6a00947d7ca4c97a7bdf6ad46612559b58acb56cb0e891d249fe00000000000000000000000000000000000000000000000000000000000000a5",
+      "0x43d06be72d58b0a6dd8b48d14c1f76a2baed1f10b679cf98560bf804d5560815": "0x06193bb948d6b7a6fcbe51c193ccf2183bb5d979b6ae5d3a6971b8851461d3b000000000000000000000000000000000000000000000000000000000000000d9",
+      "0x7413ebb05cad6a00947d7ca4c97a7bdf6ad46612559b58acb56cb0e891d249fe": "0x000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce000000000000000000000000a2ee6fce4acb62d95448729cdb781e3beb62504a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000674e600000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000004426dfbc200000000000000000000000002b133847465ce196015044afbe675afdda482e1b00000000000000000000000000000000000000000000000000000007b600b23000000000000000000000000000000000000000000000000000000000",
+      "0x8b8157b3a8a0965e4e1ffe8923b1a74d4eabd3e232d717927d6325cfbdd90497": "0x000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce0000000000000000000000000000000000000000000000000000000000000009",
+      "0x97f8fe16108d894219e9ecb0aaea81b7f9b83d2e4e1c9b39a65ef6497e7b9ac5": "0x0000000000000000000000002b133847465ce196015044afbe675afdda482e1b000000000000000000000000000000000000000000000000000000000000000a",
+      "0xb44db9c0c442ac88eb15e56ea26041b4ab500f5e064a7633d68fa332ec1405bc": "0x000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce0000000000000000000000000000000000000000000000000000000000000003",
+      "0xcb10a8e8a5102a768f08416832d6e38d8cbae57d50b254e157ea01a2c7414a04": "0x000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce97f8fe16108d894219e9ecb0aaea81b7f9b83d2e4e1c9b39a65ef6497e7b9ac5"
     },
-    {
-      "text": "NFT Enjoyoor",
-      "bg": "bg-danger",
-      "textColor": "text-white",
-      "icon": "@@smort",
-      "tooltip": "Top 1m addresses which have sent or received NFTs"
+    "addresses": {
+      "0x0ec393209674090368c592a591b25811e490bf36": {
+        "0xf0bc42eb6552d0da1c24a4ae53322440bc95b6254f92e58bc984a2f52fc1f190": {
+          "label": "",
+          "functions": {
+            "0x70aff70f": {
+              "type": "function",
+              "name": "depositTo",
+              "inputs": [
+                { "name": "arg0", "type": "uint256", "components": null },
+                { "name": "arg1", "type": "address", "components": null }
+              ],
+              "outputs": null,
+              "constant": false
+            }
+          },
+          "events": {
+            "0xb4e1304f97b5093610f51b33ddab6622388422e2dac138b0d32f93dcfbd39edf": {
+              "type": "event",
+              "name": "Deposited",
+              "inputs": [
+                {
+                  "name": "arg0",
+                  "type": "address",
+                  "components": null,
+                  "indexed": false
+                },
+                {
+                  "name": "arg1",
+                  "type": "uint256",
+                  "components": null,
+                  "indexed": false
+                },
+                {
+                  "name": "arg2",
+                  "type": "address",
+                  "components": null,
+                  "indexed": false
+                }
+              ],
+              "anonymous": false
+            }
+          },
+          "errors": {}
+        }
+      },
+      "0x504a330327a089d8364c4ab3811ee26976d388ce": {
+        "0x6bec2bf64f7e824109f6ed55f77dd7665801d6195e461666ad6a5342a9f6daf5": {
+          "label": "TransparentUpgradeableProxy",
+          "functions": {
+            "0x70aff70f": {
+              "type": "function",
+              "name": "depositTo",
+              "inputs": [
+                { "name": "arg0", "type": "uint256", "components": null },
+                { "name": "arg1", "type": "address", "components": null }
+              ],
+              "outputs": null,
+              "constant": false
+            }
+          },
+          "events": {},
+          "errors": {}
+        }
+      },
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "0xd80d4b7c890cb9d6a4893e6b52bc34b56b25335cb13716e0d1d31383e6b41505": {
+          "label": "Centre: USD Coin",
+          "functions": {
+            "0x23b872dd": {
+              "type": "function",
+              "name": "transferFrom",
+              "inputs": [
+                { "name": "from", "type": "address", "components": null },
+                { "name": "to", "type": "address", "components": null },
+                { "name": "value", "type": "uint256", "components": null }
+              ],
+              "outputs": [{ "name": "", "type": "bool", "components": null }],
+              "constant": false
+            },
+            "0x70a08231": {
+              "type": "function",
+              "name": "balanceOf",
+              "inputs": [
+                { "name": "account", "type": "address", "components": null }
+              ],
+              "outputs": [
+                { "name": "", "type": "uint256", "components": null }
+              ],
+              "constant": false
+            }
+          },
+          "events": {},
+          "errors": {}
+        }
+      },
+      "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf": {
+        "0x10d68f9bb2ba9f5e9163cadc4a3446be0c6b2ab8b1b65079e79dcd94a6dc329c": {
+          "label": "FiatTokenV2_1",
+          "functions": {
+            "0x23b872dd": {
+              "type": "function",
+              "name": "transferFrom",
+              "inputs": [
+                { "name": "from", "type": "address", "components": null },
+                { "name": "to", "type": "address", "components": null },
+                { "name": "value", "type": "uint256", "components": null }
+              ],
+              "outputs": [{ "name": "", "type": "bool", "components": null }],
+              "constant": false
+            },
+            "0x70a08231": {
+              "type": "function",
+              "name": "balanceOf",
+              "inputs": [
+                { "name": "account", "type": "address", "components": null }
+              ],
+              "outputs": [
+                { "name": "", "type": "uint256", "components": null }
+              ],
+              "constant": false
+            }
+          },
+          "events": {
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+              "type": "event",
+              "name": "Transfer",
+              "inputs": [
+                {
+                  "name": "from",
+                  "type": "address",
+                  "components": null,
+                  "indexed": true
+                },
+                {
+                  "name": "to",
+                  "type": "address",
+                  "components": null,
+                  "indexed": true
+                },
+                {
+                  "name": "value",
+                  "type": "uint256",
+                  "components": null,
+                  "indexed": false
+                }
+              ],
+              "anonymous": false
+            }
+          },
+          "errors": {}
+        }
+      },
+      "0xb32c3d0ddb0063ffb15e8a50b40cc62230d820b3": {
+        "0xa3ecb8942ebc12fdd701f7fec429aa0faaaafec0f8bb26aa0bc336f0655fa4a9": {
+          "label": "",
+          "functions": {
+            "0x9f3ce55a": {
+              "type": "function",
+              "name": "sendMessage",
+              "inputs": [
+                { "name": "arg0", "type": "address", "components": null },
+                { "name": "arg1", "type": "uint256", "components": null },
+                { "name": "arg2", "type": "bytes", "components": null }
+              ],
+              "outputs": null,
+              "constant": false
+            }
+          },
+          "events": {},
+          "errors": {}
+        }
+      },
+      "0xd19d4b5d358258f05d7b411e21a1460d11b0876f": {
+        "0x4d9be648c5bf39973670d9f8b481d5d0b971e6a2db2deccc6b98cde21c5dd83e": {
+          "label": "",
+          "functions": {
+            "0x9f3ce55a": {
+              "type": "function",
+              "name": "sendMessage",
+              "inputs": [
+                { "name": "arg0", "type": "address", "components": null },
+                { "name": "arg1", "type": "uint256", "components": null },
+                { "name": "arg2", "type": "bytes", "components": null }
+              ],
+              "outputs": null,
+              "constant": false
+            }
+          },
+          "events": {},
+          "errors": {}
+        }
+      }
+    },
+    "entrypoint": {
+      "path": "0",
+      "type": "call",
+      "variant": "call",
+      "from": "0x2b133847465ce196015044afbe675afdda482e1b",
+      "to": "0x504a330327a089d8364c4ab3811ee26976d388ce",
+      "input": "0x70aff70f00000000000000000000000000000000000000000000000000000007b600b2300000000000000000000000002b133847465ce196015044afbe675afdda482e1b",
+      "output": "0x",
+      "gas": 195526,
+      "gasUsed": 128426,
+      "value": "0x0",
+      "status": 1,
+      "codehash": "0x6bec2bf64f7e824109f6ed55f77dd7665801d6195e461666ad6a5342a9f6daf5",
+      "isPrecompile": false,
+      "children": [
+        {
+          "path": "0.0",
+          "type": "sload",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103",
+          "value": "0x00000000000000000000000041fad3df1b07b647d120d055259e474fe8046eb5"
+        },
+        {
+          "path": "0.1",
+          "type": "sload",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "value": "0x0000000000000000000000000ec393209674090368c592a591b25811e490bf36"
+        },
+        {
+          "path": "0.2",
+          "type": "call",
+          "variant": "delegatecall",
+          "from": "0x504a330327a089d8364c4ab3811ee26976d388ce",
+          "to": "0x0ec393209674090368c592a591b25811e490bf36",
+          "input": "0x70aff70f00000000000000000000000000000000000000000000000000000007b600b2300000000000000000000000002b133847465ce196015044afbe675afdda482e1b",
+          "output": "0x",
+          "gas": 185304,
+          "gasUsed": 111899,
+          "value": "0x0",
+          "status": 1,
+          "codehash": "0xf0bc42eb6552d0da1c24a4ae53322440bc95b6254f92e58bc984a2f52fc1f190",
+          "isPrecompile": false,
+          "children": [
+            {
+              "path": "0.2.0",
+              "type": "sload",
+              "slot": "0x0000000000000000000000000000000000000000000000000000000000000033",
+              "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "path": "0.2.1",
+              "type": "sload",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000c9",
+              "value": "0x000000000000000000000000a2ee6fce4acb62d95448729cdb781e3beb62504a"
+            },
+            {
+              "path": "0.2.2",
+              "type": "sload",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000cb",
+              "value": "0x000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+            },
+            {
+              "path": "0.2.3",
+              "type": "call",
+              "variant": "staticcall",
+              "from": "0x504a330327a089d8364c4ab3811ee26976d388ce",
+              "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "input": "0x70a082310000000000000000000000002b133847465ce196015044afbe675afdda482e1b",
+              "output": "0x00000000000000000000000000000000000000000000000000000007b600b230",
+              "gas": 172981,
+              "gasUsed": 9815,
+              "value": "0x0",
+              "status": 1,
+              "codehash": "0xd80d4b7c890cb9d6a4893e6b52bc34b56b25335cb13716e0d1d31383e6b41505",
+              "isPrecompile": false,
+              "children": [
+                {
+                  "path": "0.2.3.0",
+                  "type": "sload",
+                  "slot": "0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b",
+                  "value": "0x000000000000000000000000807a96288a1a408dbc13de2b1d087d10356395d2"
+                },
+                {
+                  "path": "0.2.3.1",
+                  "type": "sload",
+                  "slot": "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+                  "value": "0x000000000000000000000000a2327a938febf5fec13bacfb16ae10ecbc4cbdcf"
+                },
+                {
+                  "path": "0.2.3.2",
+                  "type": "call",
+                  "variant": "delegatecall",
+                  "from": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "to": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+                  "input": "0x70a082310000000000000000000000002b133847465ce196015044afbe675afdda482e1b",
+                  "output": "0x00000000000000000000000000000000000000000000000000000007b600b230",
+                  "gas": 163150,
+                  "gasUsed": 2529,
+                  "value": "0x0",
+                  "status": 1,
+                  "codehash": "0x10d68f9bb2ba9f5e9163cadc4a3446be0c6b2ab8b1b65079e79dcd94a6dc329c",
+                  "isPrecompile": false,
+                  "children": [
+                    {
+                      "path": "0.2.3.2.0",
+                      "type": "sload",
+                      "slot": "0x08f9a06d46552b7b70c8c34206410f702237fb742fefc1c068f51a930be19dfa",
+                      "value": "0x00000000000000000000000000000000000000000000000000000007b600b230"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "path": "0.2.4",
+              "type": "sload",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000cd",
+              "value": "0x0000000000000000000000000000000000000000000000000000000000000001"
+            },
+            {
+              "path": "0.2.5",
+              "type": "sstore",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000cd",
+              "oldValue": "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "newValue": "0x0000000000000000000000000000000000000000000000000000000000000002"
+            },
+            {
+              "path": "0.2.6",
+              "type": "sload",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000cb",
+              "value": "0x000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+            },
+            {
+              "path": "0.2.7",
+              "type": "call",
+              "variant": "staticcall",
+              "from": "0x504a330327a089d8364c4ab3811ee26976d388ce",
+              "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "input": "0x70a08231000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce",
+              "output": "0x00000000000000000000000000000000000000000000000000000b33d19e1218",
+              "gas": 157802,
+              "gasUsed": 3315,
+              "value": "0x0",
+              "status": 1,
+              "codehash": "0xd80d4b7c890cb9d6a4893e6b52bc34b56b25335cb13716e0d1d31383e6b41505",
+              "isPrecompile": false,
+              "children": [
+                {
+                  "path": "0.2.7.0",
+                  "type": "sload",
+                  "slot": "0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b",
+                  "value": "0x000000000000000000000000807a96288a1a408dbc13de2b1d087d10356395d2"
+                },
+                {
+                  "path": "0.2.7.1",
+                  "type": "sload",
+                  "slot": "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+                  "value": "0x000000000000000000000000a2327a938febf5fec13bacfb16ae10ecbc4cbdcf"
+                },
+                {
+                  "path": "0.2.7.2",
+                  "type": "call",
+                  "variant": "delegatecall",
+                  "from": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "to": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+                  "input": "0x70a08231000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce",
+                  "output": "0x00000000000000000000000000000000000000000000000000000b33d19e1218",
+                  "gas": 154606,
+                  "gasUsed": 2529,
+                  "value": "0x0",
+                  "status": 1,
+                  "codehash": "0x10d68f9bb2ba9f5e9163cadc4a3446be0c6b2ab8b1b65079e79dcd94a6dc329c",
+                  "isPrecompile": false,
+                  "children": [
+                    {
+                      "path": "0.2.7.2.0",
+                      "type": "sload",
+                      "slot": "0x8b8157b3a8a0965e4e1ffe8923b1a74d4eabd3e232d717927d6325cfbdd90497",
+                      "value": "0x00000000000000000000000000000000000000000000000000000b33d19e1218"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "path": "0.2.8",
+              "type": "sload",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000cb",
+              "value": "0x000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+            },
+            {
+              "path": "0.2.9",
+              "type": "call",
+              "variant": "call",
+              "from": "0x504a330327a089d8364c4ab3811ee26976d388ce",
+              "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "input": "0x23b872dd0000000000000000000000002b133847465ce196015044afbe675afdda482e1b000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce00000000000000000000000000000000000000000000000000000007b600b230",
+              "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "gas": 153207,
+              "gasUsed": 22392,
+              "value": "0x0",
+              "status": 1,
+              "codehash": "0xd80d4b7c890cb9d6a4893e6b52bc34b56b25335cb13716e0d1d31383e6b41505",
+              "isPrecompile": false,
+              "children": [
+                {
+                  "path": "0.2.9.0",
+                  "type": "sload",
+                  "slot": "0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b",
+                  "value": "0x000000000000000000000000807a96288a1a408dbc13de2b1d087d10356395d2"
+                },
+                {
+                  "path": "0.2.9.1",
+                  "type": "sload",
+                  "slot": "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+                  "value": "0x000000000000000000000000a2327a938febf5fec13bacfb16ae10ecbc4cbdcf"
+                },
+                {
+                  "path": "0.2.9.2",
+                  "type": "call",
+                  "variant": "delegatecall",
+                  "from": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "to": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+                  "input": "0x23b872dd0000000000000000000000002b133847465ce196015044afbe675afdda482e1b000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce00000000000000000000000000000000000000000000000000000007b600b230",
+                  "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                  "gas": 150074,
+                  "gasUsed": 21597,
+                  "value": "0x0",
+                  "status": 1,
+                  "codehash": "0x10d68f9bb2ba9f5e9163cadc4a3446be0c6b2ab8b1b65079e79dcd94a6dc329c",
+                  "isPrecompile": false,
+                  "children": [
+                    {
+                      "path": "0.2.9.2.0",
+                      "type": "sload",
+                      "slot": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                      "value": "0x0000000000000000000000004914f61d25e5c567143774b76edbf4d5109a8566"
+                    },
+                    {
+                      "path": "0.2.9.2.1",
+                      "type": "sload",
+                      "slot": "0xb44db9c0c442ac88eb15e56ea26041b4ab500f5e064a7633d68fa332ec1405bc",
+                      "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+                    },
+                    {
+                      "path": "0.2.9.2.2",
+                      "type": "sload",
+                      "slot": "0x25379e5f1d4780be71567960ce4e5867a2ca9c065cbf97aac462d5b76f927729",
+                      "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+                    },
+                    {
+                      "path": "0.2.9.2.3",
+                      "type": "sload",
+                      "slot": "0xb44db9c0c442ac88eb15e56ea26041b4ab500f5e064a7633d68fa332ec1405bc",
+                      "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+                    },
+                    {
+                      "path": "0.2.9.2.4",
+                      "type": "sload",
+                      "slot": "0xcb10a8e8a5102a768f08416832d6e38d8cbae57d50b254e157ea01a2c7414a04",
+                      "value": "0x00000000000000000000000000000000000000000000000000000007b600b230"
+                    },
+                    {
+                      "path": "0.2.9.2.5",
+                      "type": "sload",
+                      "slot": "0x08f9a06d46552b7b70c8c34206410f702237fb742fefc1c068f51a930be19dfa",
+                      "value": "0x00000000000000000000000000000000000000000000000000000007b600b230"
+                    },
+                    {
+                      "path": "0.2.9.2.6",
+                      "type": "sload",
+                      "slot": "0x08f9a06d46552b7b70c8c34206410f702237fb742fefc1c068f51a930be19dfa",
+                      "value": "0x00000000000000000000000000000000000000000000000000000007b600b230"
+                    },
+                    {
+                      "path": "0.2.9.2.7",
+                      "type": "sstore",
+                      "slot": "0x08f9a06d46552b7b70c8c34206410f702237fb742fefc1c068f51a930be19dfa",
+                      "oldValue": "0x00000000000000000000000000000000000000000000000000000007b600b230",
+                      "newValue": "0x0000000000000000000000000000000000000000000000000000000000000000"
+                    },
+                    {
+                      "path": "0.2.9.2.8",
+                      "type": "sload",
+                      "slot": "0x8b8157b3a8a0965e4e1ffe8923b1a74d4eabd3e232d717927d6325cfbdd90497",
+                      "value": "0x00000000000000000000000000000000000000000000000000000b33d19e1218"
+                    },
+                    {
+                      "path": "0.2.9.2.9",
+                      "type": "sstore",
+                      "slot": "0x8b8157b3a8a0965e4e1ffe8923b1a74d4eabd3e232d717927d6325cfbdd90497",
+                      "oldValue": "0x00000000000000000000000000000000000000000000000000000b33d19e1218",
+                      "newValue": "0x00000000000000000000000000000000000000000000000000000b3b879ec448"
+                    },
+                    {
+                      "path": "0.2.9.2.10",
+                      "type": "log",
+                      "topics": [
+                        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+                        "0x0000000000000000000000002b133847465ce196015044afbe675afdda482e1b",
+                        "0x000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce"
+                      ],
+                      "data": "0x00000000000000000000000000000000000000000000000000000007b600b230"
+                    },
+                    {
+                      "path": "0.2.9.2.11",
+                      "type": "sload",
+                      "slot": "0xcb10a8e8a5102a768f08416832d6e38d8cbae57d50b254e157ea01a2c7414a04",
+                      "value": "0x00000000000000000000000000000000000000000000000000000007b600b230"
+                    },
+                    {
+                      "path": "0.2.9.2.12",
+                      "type": "sstore",
+                      "slot": "0xcb10a8e8a5102a768f08416832d6e38d8cbae57d50b254e157ea01a2c7414a04",
+                      "oldValue": "0x00000000000000000000000000000000000000000000000000000007b600b230",
+                      "newValue": "0x0000000000000000000000000000000000000000000000000000000000000000"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "path": "0.2.10",
+              "type": "sload",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000cb",
+              "value": "0x000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+            },
+            {
+              "path": "0.2.11",
+              "type": "call",
+              "variant": "staticcall",
+              "from": "0x504a330327a089d8364c4ab3811ee26976d388ce",
+              "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "input": "0x70a08231000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce",
+              "output": "0x00000000000000000000000000000000000000000000000000000b3b879ec448",
+              "gas": 130364,
+              "gasUsed": 1315,
+              "value": "0x0",
+              "status": 1,
+              "codehash": "0xd80d4b7c890cb9d6a4893e6b52bc34b56b25335cb13716e0d1d31383e6b41505",
+              "isPrecompile": false,
+              "children": [
+                {
+                  "path": "0.2.11.0",
+                  "type": "sload",
+                  "slot": "0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b",
+                  "value": "0x000000000000000000000000807a96288a1a408dbc13de2b1d087d10356395d2"
+                },
+                {
+                  "path": "0.2.11.1",
+                  "type": "sload",
+                  "slot": "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+                  "value": "0x000000000000000000000000a2327a938febf5fec13bacfb16ae10ecbc4cbdcf"
+                },
+                {
+                  "path": "0.2.11.2",
+                  "type": "call",
+                  "variant": "delegatecall",
+                  "from": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "to": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+                  "input": "0x70a08231000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce",
+                  "output": "0x00000000000000000000000000000000000000000000000000000b3b879ec448",
+                  "gas": 127597,
+                  "gasUsed": 529,
+                  "value": "0x0",
+                  "status": 1,
+                  "codehash": "0x10d68f9bb2ba9f5e9163cadc4a3446be0c6b2ab8b1b65079e79dcd94a6dc329c",
+                  "isPrecompile": false,
+                  "children": [
+                    {
+                      "path": "0.2.11.2.0",
+                      "type": "sload",
+                      "slot": "0x8b8157b3a8a0965e4e1ffe8923b1a74d4eabd3e232d717927d6325cfbdd90497",
+                      "value": "0x00000000000000000000000000000000000000000000000000000b3b879ec448"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "path": "0.2.12",
+              "type": "sload",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000cc",
+              "value": "0x00000000000000000000000000000000000000000000000000000b33d19e1218"
+            },
+            {
+              "path": "0.2.13",
+              "type": "sstore",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000cc",
+              "oldValue": "0x00000000000000000000000000000000000000000000000000000b33d19e1218",
+              "newValue": "0x00000000000000000000000000000000000000000000000000000b3b879ec448"
+            },
+            {
+              "path": "0.2.14",
+              "type": "sload",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000ca",
+              "value": "0x000000000000000000000000d19d4b5d358258f05d7b411e21a1460d11b0876f"
+            },
+            {
+              "path": "0.2.15",
+              "type": "sload",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000c9",
+              "value": "0x000000000000000000000000a2ee6fce4acb62d95448729cdb781e3beb62504a"
+            },
+            {
+              "path": "0.2.16",
+              "type": "call",
+              "variant": "call",
+              "from": "0x504a330327a089d8364c4ab3811ee26976d388ce",
+              "to": "0xd19d4b5d358258f05d7b411e21a1460d11b0876f",
+              "input": "0x9f3ce55a000000000000000000000000a2ee6fce4acb62d95448729cdb781e3beb62504a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000004426dfbc200000000000000000000000002b133847465ce196015044afbe675afdda482e1b00000000000000000000000000000000000000000000000000000007b600b23000000000000000000000000000000000000000000000000000000000",
+              "output": "0x",
+              "gas": 118160,
+              "gasUsed": 44600,
+              "value": "0x0",
+              "status": 1,
+              "codehash": "0x4d9be648c5bf39973670d9f8b481d5d0b971e6a2db2deccc6b98cde21c5dd83e",
+              "isPrecompile": false,
+              "children": [
+                {
+                  "path": "0.2.16.0",
+                  "type": "sload",
+                  "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103",
+                  "value": "0x000000000000000000000000f5058616517c068c7b8c7ebc69ff636ade9066d6"
+                },
+                {
+                  "path": "0.2.16.1",
+                  "type": "sload",
+                  "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+                  "value": "0x000000000000000000000000b32c3d0ddb0063ffb15e8a50b40cc62230d820b3"
+                },
+                {
+                  "path": "0.2.16.2",
+                  "type": "call",
+                  "variant": "delegatecall",
+                  "from": "0xd19d4b5d358258f05d7b411e21a1460d11b0876f",
+                  "to": "0xb32c3d0ddb0063ffb15e8a50b40cc62230d820b3",
+                  "input": "0x9f3ce55a000000000000000000000000a2ee6fce4acb62d95448729cdb781e3beb62504a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000004426dfbc200000000000000000000000002b133847465ce196015044afbe675afdda482e1b00000000000000000000000000000000000000000000000000000007b600b23000000000000000000000000000000000000000000000000000000000",
+                  "output": "0x",
+                  "gas": 109274,
+                  "gasUsed": 37410,
+                  "value": "0x0",
+                  "status": 1,
+                  "codehash": "0xa3ecb8942ebc12fdd701f7fec429aa0faaaafec0f8bb26aa0bc336f0655fa4a9",
+                  "isPrecompile": false,
+                  "children": [
+                    {
+                      "path": "0.2.16.2.0",
+                      "type": "sload",
+                      "slot": "0x21ebe1c20d059c8774c0e58bbce5b1cf983d25acc658bc3997f122df6f662c55",
+                      "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+                    },
+                    {
+                      "path": "0.2.16.2.1",
+                      "type": "sload",
+                      "slot": "0x43d06be72d58b0a6dd8b48d14c1f76a2baed1f10b679cf98560bf804d5560815",
+                      "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+                    },
+                    {
+                      "path": "0.2.16.2.2",
+                      "type": "sload",
+                      "slot": "0x00000000000000000000000000000000000000000000000000000000000000e4",
+                      "value": "0x00000000000000000000000000000000000000000000000000000000000674e6"
+                    },
+                    {
+                      "path": "0.2.16.2.3",
+                      "type": "sstore",
+                      "slot": "0x429ffd05499d1caecb97ddac2d1a2d80ed4822382dccff4ed9e2aee00fe2a842",
+                      "oldValue": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                      "newValue": "0x0000000000000000000000000000000000000000000000000000000000000001"
+                    },
+                    {
+                      "path": "0.2.16.2.4",
+                      "type": "sload",
+                      "slot": "0x00000000000000000000000000000000000000000000000000000000000000e4",
+                      "value": "0x00000000000000000000000000000000000000000000000000000000000674e6"
+                    },
+                    {
+                      "path": "0.2.16.2.5",
+                      "type": "sstore",
+                      "slot": "0x00000000000000000000000000000000000000000000000000000000000000e4",
+                      "oldValue": "0x00000000000000000000000000000000000000000000000000000000000674e6",
+                      "newValue": "0x00000000000000000000000000000000000000000000000000000000000674e7"
+                    },
+                    {
+                      "path": "0.2.16.2.6",
+                      "type": "log",
+                      "topics": [
+                        "0xe856c2b8bd4eb0027ce32eeaf595c21b0b6b4644b326e5b7bd80a1cf8db72e6c",
+                        "0x000000000000000000000000504a330327a089d8364c4ab3811ee26976d388ce",
+                        "0x000000000000000000000000a2ee6fce4acb62d95448729cdb781e3beb62504a",
+                        "0x7413ebb05cad6a00947d7ca4c97a7bdf6ad46612559b58acb56cb0e891d249fe"
+                      ],
+                      "data": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000674e60000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000004426dfbc200000000000000000000000002b133847465ce196015044afbe675afdda482e1b00000000000000000000000000000000000000000000000000000007b600b23000000000000000000000000000000000000000000000000000000000"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "path": "0.2.17",
+              "type": "log",
+              "topics": [
+                "0xb4e1304f97b5093610f51b33ddab6622388422e2dac138b0d32f93dcfbd39edf",
+                "0x0000000000000000000000002b133847465ce196015044afbe675afdda482e1b",
+                "0x0000000000000000000000002b133847465ce196015044afbe675afdda482e1b"
+              ],
+              "data": "0x00000000000000000000000000000000000000000000000000000007b600b230"
+            },
+            {
+              "path": "0.2.18",
+              "type": "sstore",
+              "slot": "0x00000000000000000000000000000000000000000000000000000000000000cd",
+              "oldValue": "0x0000000000000000000000000000000000000000000000000000000000000002",
+              "newValue": "0x0000000000000000000000000000000000000000000000000000000000000001"
+            }
+          ]
+        }
+      ]
     }
-  ]
+  }
 }

@@ -11,8 +11,10 @@ tokenPrice = {}
 
 def format_address(address):
     # query llamafi for price and name
-    addresses.append(f"0x{address[-40:]}")
-    return f"0x{address[-40:]}"
+    formatted_address = f"0x{address[-40:]}"
+    if formatted_address not in addresses:
+        addresses.append(formatted_address)
+    return formatted_address
 
 
 def format_numeric(data):
@@ -33,7 +35,6 @@ def parse_event(event_hash, contract_info, child):
             # print(event['inputs'])
             # truncate initial 0x in child['data']
             child['data'] = child['data'][2:]
-
             for input in event['inputs']:
                 if input['indexed']:
                     indexed_count += 1
@@ -67,7 +68,11 @@ def parse_event(event_hash, contract_info, child):
 
 
 def parse_children(children, to, contracts):
-    parsed_data = {"call": {"contract": format_address(to), "logs": []}}
+    label = contracts.get(to).get('label')
+    contractName = format_address(to)
+    if label:
+        contractName = f'{label} {contractName}'
+    parsed_data = {"call": {"contract": contractName, "logs": []}}
     for child in children:
         # print(f"reached {child}")
         if child['type'] == 'log':
@@ -98,6 +103,7 @@ def parse_json(data):
 
     contracts = {}
     for address, contract_data in data['result']['addresses'].items():
+
         for codehash, contract_info in contract_data.items():
             contracts[address] = contract_info
 
@@ -113,6 +119,9 @@ def parse_json(data):
     for token_key in tokenPrice:
         res = res.replace(
             token_key, tokenPrice[token_key])
+
+    tokenPrice.clear()
+    addresses.clear()
     result = json.loads(res)
 
     return result
