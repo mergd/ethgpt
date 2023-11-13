@@ -68,6 +68,16 @@ async def api(item: Item):
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
+
+@app.get("/address/price/")
+def price(address: str):
+    # query llamafi for price and name
+    url = f'https://coins.llama.fi/prices/current/ethereum:{address}'
+    response = requests.get(url)
+    response.raise_for_status()
+    parsed = response.json()
+    return parsed
+
 # no api works to get this to work
 # @app.get("/address/transactions/")
 # async def transactions(address: str):

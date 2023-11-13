@@ -1,15 +1,17 @@
 import json
 from eth_utils import big_endian_to_int
-import re
+import requests
 
 # Rough ethereum transaction parser which tries to decode events
 
-addresses = {}
+addresses = []
+
+tokenPrice = {}
 
 
 def format_address(address):
     # query llamafi for price and name
-    addresses.append(address)
+    addresses.append(f"0x{address[-40:]}")
     return f"0x{address[-40:]}"
 
 
@@ -65,7 +67,7 @@ def parse_event(event_hash, contract_info, child):
 
 
 def parse_children(children, to, contracts):
-    parsed_data = {"call": {"contract": to, "logs": []}}
+    parsed_data = {"call": {"contract": format_address(to), "logs": []}}
     for child in children:
         # print(f"reached {child}")
         if child['type'] == 'log':
@@ -104,21 +106,42 @@ def parse_json(data):
 
     if 'call' in call_data:  # To avoid empty call structures
         result["call"] = call_data["call"]
+    # pull labels and prices from llama
+
+    res = json.dumps(result)
+    pullTokenInfo()
+    for token_key in tokenPrice:
+        res = res.replace(
+            token_key, tokenPrice[token_key])
+    result = json.loads(res)
 
     return result
 
 
-async def pullTokenInfo():
+def pullTokenInfo():
     # query llamafi for price and name
-    url = 'coins.llama.fi/prices/current/'
+    url = 'https://coins.llama.fi/prices/current/'
     for address in addresses:
-        url.append(f"ethereum:{address},")
+        url += (f"ethereum:{address},")
+    print(url)
     response = requests.get(url)
     response.raise_for_status()
-    parsed = response.json()
+
+    res = response.json()['coins']
+    keys = res.keys()
+
+    for coin in keys:
+        # substring the ethereum:
+        print(coin[9:])
+        coin_name = coin[9:].lower()
+        coin_info = res[coin]
+        coin_price = coin_info['price']
+        symbol = coin_info['symbol']
+        fstring = f"{symbol}  (${coin_price})"
+        tokenPrice[coin_name] = (fstring)
 
 
-async def nparseTx(data):
+def nparseTx(data):
     res = parse_json(data)
     # formatted_res = json.dumps(res, indent=4)
     return res
@@ -126,7 +149,7 @@ async def nparseTx(data):
 
 # Parse the JSON data
 if __name__ == "__main__":
-    with open('gg.json', 'r') as f:
+    with open('json/usdcXfer.json', 'r') as f:
         data = json.load(f)
 
     res = parse_json(data)
